@@ -9,22 +9,23 @@ var gameOverSound, knifeSwoosh;
 
 function preload(){
   
-  knifeImage = loadImage("knife.png");
-  monsterImage = loadAnimation("alien1.png","alien2.png")
-  fruit1 = loadImage("fruit1.png");
-  fruit2 = loadImage("fruit2.png");
-  fruit3 = loadImage("fruit3.png");
-  fruit4 = loadImage("fruit4.png");
-  gameOverImage = loadImage("gameover.png")
+  knifeImage = loadImage("./Assets/knife.png");
+  monsterImage = loadAnimation("./Assets/alien1.png","./Assets/alien2.png")
+  fruit1 = loadImage("./Assets/fruit1.png");
+  fruit2 = loadImage("./Assets/fruit2.png");
+  fruit3 = loadImage("./Assets/fruit3.png");
+  fruit4 = loadImage("./Assets/fruit4.png");
+  gameOverImage = loadImage("./Assets/gameover.png")
   
-  gameOverSound = loadSound("gameover.mp3")
-  knifeSwooshSound = loadSound("knifeSwoosh.mp3")
+  gameOverSound = loadSound("./Assets/gameover.mp3")
+  knifeSwooshSound = loadSound("./Assets/knifeSwoosh.mp3")
 }
 
 
 
 function setup() {
-  createCanvas(600, 600);
+  var canvas = createCanvas(600, 600);
+	canvas.parent('Game');
   
   //creating sword
    knife=createSprite(40,200,20,20);
