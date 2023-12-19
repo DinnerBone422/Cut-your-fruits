@@ -10,15 +10,15 @@ var gameOverSound, knifeSwoosh;
 function preload(){
   
   knifeImage = loadImage("/Assets/knife.png");
-  monsterImage = loadAnimation("/Assets/alien1.png","/Assets/alien2.png")
+  monsterImage = loadAnimation("/Assets/alien1.png","/Assets/alien2.png");
   fruit1 = loadImage("/Assets/fruit1.png");
   fruit2 = loadImage("/Assets/fruit2.png");
   fruit3 = loadImage("/Assets/fruit3.png");
   fruit4 = loadImage("/Assets/fruit4.png");
-  gameOverImage = loadImage("/Assets/gameover.png")
+  gameOverImage = loadImage("/Assets/gameover.png");
   
-  gameOverSound = loadSound("/Assets/gameover.mp3")
-  knifeSwooshSound = loadSound("/Assets/knifeSwoosh.mp3")
+  gameOverSound = loadSound("/Assets/gameover.mp3");
+  knifeSwooshSound = loadSound("/Assets/knifeSwoosh.mp3");
 }
 
 
@@ -30,7 +30,7 @@ function setup() {
   //creating sword
    knife=createSprite(40,200,20,20);
    knife.addImage(knifeImage);
-   knife.scale=0.7
+   knife.scale=0.7;
   
   
   
@@ -79,7 +79,7 @@ function draw() {
       if(monsterGroup.isTouching(knife)){
         gameState=END;
         //gameover sound
-        gameOverSound.play()
+        gameOverSound.play();
         
         fruitGroup.destroyEach();
         monsterGroup.destroyEach();
@@ -116,7 +116,7 @@ function Monster(){
 function fruits(){
   if(World.frameCount%80===0){
     fruit=createSprite(400,200,20,20);
-    fruit.x = 0    
+    fruit.x = 0;
   //Increase the velocity of fruit after score 4 
 
        fruit.velocityX= (7+(score/4));
